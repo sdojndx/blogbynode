@@ -1,0 +1,18 @@
+<!--服务器渲染页面模板,注意( <!-vue-ssr-outlet->) 注释, 这里将是应用程序 HTML 标记注入的地方,很重要!!! -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+    <!--vue-ssr-outlet-->
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.options.files.js %>"></script>
+</body>
+
+</html>

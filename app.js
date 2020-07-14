@@ -6,10 +6,15 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const dbs = require('./dbs/index')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
+const manage = require('./routes/manage')
 
+
+//mongoose
+dbs.init()
 // error handler
 onerror(app)
 
@@ -50,6 +55,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
+app.use(manage.routes(), manage.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

@@ -1,0 +1,13 @@
+<!-- 因为新版的HtmlWebpackPlugin不支持html变量编译,需要转成ejs模板,然后直接输出html格式 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
