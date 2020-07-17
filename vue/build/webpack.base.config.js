@@ -10,13 +10,13 @@ const chunkPackages = {
 
 }
 module.exports = {
-    entry: {
-        index: './src/main.js'
-    },
-    output: {
-        path: resolve(__dirname, '../dist/'),
-        chunkFilename: '[name].js?[hash]'
-    },
+    // entry: {
+    //     index: '../app.js'
+    // },
+    // output: {
+    //     path: resolve(__dirname, '../../dist/client'),
+    //     chunkFilename: '[name].js?[hash]'
+    // },
     module: {
         rules: [{
                 test: /\.vue$/,
@@ -87,22 +87,10 @@ module.exports = {
             }
         ]
     },
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-            maxInitialRequests: 1
-        },
-        runtimeChunk: {
-            name: 'vendor'
-        }
-    },
     performance:{
         hints:"warning"
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        }),
         new ExtractTextPlugin({
             filename: '[name].css',
             ignoreOrder: true

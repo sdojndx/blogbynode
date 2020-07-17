@@ -1,13 +1,17 @@
+<!-- home.vue -->
 <template>
-    <div>tree book</div>
+  <div>
+    home
+    <div></div>
+</div>
 </template>
+
 <script>
-export default {    
-    created(){
-
-    },
-    mounted(){
-
+    export default {
+        
     }
-}
 </script>
+
+<style scoped>
+
+</style>
