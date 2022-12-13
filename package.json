@@ -31,7 +31,7 @@
     "cookies": "^0.8.0",
     "debug": "^4.1.1",
     "element-ui": "^2.13.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
